@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+{% include "navigation.html" %}
+<html lang="en">
+
+    <head>
+        <title>ShopFast Asistant</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/mydesign.css'%}">
+        <script src="{% static 'umd/popper.min.js'%}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+    </head>
+
+    <body>
+        
+        <div id ="addnav"></div>
+        <form method="POST">
+        {% csrf_token %}           
+        <div class="container">
+            <div class="panel-group">
+                <div class="panel panel-info panel1" id="panel">
+                    <div class="panel-heading"  id="panel_heading"><b>Over All Perfomance Rating </b></div>
+                    <div class="panel-body panel_body"> 
+                        <div class="rate">
+                            <input type="radio" id="star5" name="ratings" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="ratings" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="ratings" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="ratings" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="ratings" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                      </div>
+                    </div>
+                </div>
+<!--
+                <div class="panel panel-info panel1" id="panel">
+                    <div class="panel-heading" id="panel_heading"> Is this site easy to use ?</div>
+                    <div class="panel-body panel_body"> 
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3" title="text">Yes </label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2" title="text">Not Sure </label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                            <label for="star1" title="text">No </label>
+                    </div>
+                </div>
+-->
+                <div class="panel panel-info panel1" id="panel">
+                    <div class="panel-heading" id="panel_heading"> <b>Describe your experience </b> </div>
+                    <div class="panel-body panel_body" > 
+                        <textarea class="form-control" name="experience" rows="5" id="comment"></textarea>
+                    </div>
+                </div>
+
+                <div class="panel panel-info panel1"  id="panel">
+                    <div class="panel-heading" id="panel_heading"><b> Suggestions </b></div>
+                    <div class="panel-body panel_body" > 
+                        <textarea class="form-control" name="suggestion" rows="5" id="comment"></textarea>
+                    </div>
+                </div><br>
+
+                <div id="submitbtn">
+                    <button type="submit" class="btn btn-success"> <b> Submit Feedback </b> </button>
+                </div>  
+
+            </div>
+        </div>
+        </fomr>
+
+        <div id="addfooter">
+        {% include "footer.html"%}
+        </div>
+
+    </body>
+
+    <script src="js/custom_javascript.js"></script>
+    
+</html>
+
+
+

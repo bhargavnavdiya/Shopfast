@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+  <head>
+
+    <title>ShopFast Asistant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "/css/mydesign.css" %}">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{% static "umd/popper.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/custom_javascript.js" %}"></script>
+ 
+  </head>
+  <body>
+        <div id ="addnav"></div>
+
+        <div class="container" >    
+        <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+
+        <div class="panel panel-info panel_body_border">
+
+          <div class="panel-heading">
+            <div class="panel-title"><b>Sign Up</b></div>
+            <div style="float:right; font-size: 85%; position: relative; top:-10px">
+            
+            </div>
+          </div>  
+
+          <div class="panel-body" >
+            
+            <form id="signupform" class="form-horizontal" role="form" method="POST">
+                {% csrf_token %}
+              <div id="signupalert" style="display:none" class="alert alert-danger">
+                  <p>Error:</p>
+                  <span></span>
+              </div>
+                                                               
+              <div class="form-group">
+                  <label for="email" class="col-md-3 control-label form_details">Email :</label>
+                  <div class="col-md-9">
+                      <input type="email" class="form-control" name="email" placeholder="email address">
+                  </div>
+              </div>
+                                  
+              <div class="form-group">
+                  <label for="firstname" class="col-md-3 control-label form_details">First Name :</label>
+                  <div class="col-md-9">
+                      <input type="text" class="form-control" name="first_name" placeholder="first name">
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="lastname" class="col-md-3 control-label form_details">Last Name :</label>
+                  <div class="col-md-9">
+                      <input type="text" class="form-control" name="last_name" placeholder="last name">
+                  </div>
+              </div>
+                                  
+              <div class="form-group">
+                  <label for="icode" class="col-md-3 control-label form_details">Username :</label>
+                  <div class="col-md-9">
+                      <input type="text" class="form-control" name="username" placeholder="username">
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="password" class="col-md-3 control-label form_details">Password :</label>
+                  <div class="col-md-9">
+                      <input type="password" class="form-control" name="password" placeholder="password">
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <!-- Button -->                                        
+                  <div class="col-md-offset-3 col-md-9">
+                      <button id="btn-signup" type="submit" class="btn btn-success"><i class="icon-hand-right"></i> <b> Sign Up </b></button>
+                      <span style="margin-left:8px;">OR</span>  
+                  </div>
+              </div>
+              Already have a account 
+              <a id="signinlink" href="/accounts/login/">Click here for Sign-In.</a>
+                              
+              <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                  <b>Sign-Up With : </b> 
+                  <a href="#" class="fa fa-google"></a>
+              <!--    <a href="#" class="fa fa-amazon"></a> -->
+                  <a href="#" class="fa fa-facebook"></a>
+                </div>                                                                            
+              </div>                            
+            </form>
+              <div name="errordiv">
+                  {% for message in messages%}
+                    <h4 style="color:red"> * {{message}}</h4>
+                  {%endfor%}
+              </div>
+          </div>
+        </div>     
+        </div>
+         </div>
+
+    <div id="addfooter"></div>
+
+  </body>   
+</html>

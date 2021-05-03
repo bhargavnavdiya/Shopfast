@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+{% include "navigation.html" %}
+<html lang="en">
+
+    <head>
+
+        <title>ShopFast Asistant</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/mydesign.css'%}">
+        <script src="{% static 'umd/popper.min.js'%}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id ="addnav"></div>
+
+        <div class="container text-center">
+            <div class="col-sm-4">
+              <div class="thumbnail offer_div_block division_block_border" >
+                <img src="{% static "image/com.jpg"%}" alt="Paris" width="400" height="300">
+                <p><strong>Fashion</strong></p>
+                <p>Valid From : 1st January - 31st January</p>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Copy Code</button>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="thumbnail offer_div_block division_block_border" >
+                <img src="{% static "image/com.jpg"%}" alt="New York" width="400" height="300">
+                <p><strong>Electronics</strong></p>
+                <p>Valid From : 1st January - 31st January</p>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Copy Code</button>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="thumbnail offer_div_block division_block_border" >
+                <img src="{% static "image/com.jpg"%}" alt="San Francisco" width="400" height="300">
+                <p><strong>Home Decoration</strong></p>
+                <p>Valid From : 1st January - 31st January</p>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Copy Code</button>
+              </div>
+            </div>
+          </div>
+        </div><br>
+
+        <div class="container text-center">
+            <div class="col-sm-4">
+              <div class="thumbnail offer_div_block division_block_border" >
+                <img src="{% static "image/com.jpg"%}" alt="Paris" width="400" height="300">
+                <p><strong>Paytm Mall</strong></p>
+                <p>Valid From : 1st January - 31st January</p>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Copy Code</button>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="thumbnail offer_div_block division_block_border">
+                <img src="{% static "image/com.jpg"%}" alt="New York" width="400" height="300">
+                <p><strong>Amazon</strong></p>
+                <p>Valid From : 1st January - 31st January</p>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Copy Code</button>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="thumbnail offer_div_block division_block_border">
+                <img src="{% static "image/com.jpg"%}" alt="San Francisco" width="400" height="300">
+                <p><strong>Flipcart</strong></p>
+                <p>Valid From : 1st January - 31st January</p>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Copy Code</button>
+              </div>
+            </div>
+          </div>
+        </div><br>
+
+        <div id="addfooter">
+            {% include "footer.html"%}
+        </div>
+
+    </body>
+
+        <script src="js/custom_javascript.js"></script>
+        
+</html>
+
+
+
